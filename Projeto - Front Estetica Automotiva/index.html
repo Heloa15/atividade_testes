@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoClean - Lavagem de Carros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <span>🚗</span>
+        <h1>AutoClean</h1>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#planos">Planos</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#agendamento">Agendar</a>
+    </nav>
+
+    <button class="btn-login" onclick="abrirLogin()">
+        Entrar
+    </button>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="tag">LAVAGEM PROFISSIONAL</span>
+
+            <h2>
+                Seu carro limpo,
+                <strong>brilhando de verdade.</strong>
+            </h2>
+
+            <p>
+                Agende sua lavagem de forma rápida e escolha
+                o plano ideal para manter seu carro sempre impecável.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#agendamento" class="btn-primary">
+                    Agendar lavagem
+                </a>
+
+                <a href="#planos" class="btn-secondary">
+                    Ver planos
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="car-icon">🚘</div>
+            <h3>Lavagem Premium</h3>
+            <p>Limpeza completa + acabamento profissional</p>
+
+            <div class="price">
+                R$ 149,90
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SERVIÇOS -->
+    <section class="section">
+        <div class="section-title">
+            <span>NOSSOS SERVIÇOS</span>
+            <h2>Escolha o serviço ideal</h2>
+        </div>
+
+        <div class="services">
+
+            <div class="service-card">
+                <div class="service-icon">🧽</div>
+                <h3>Lavagem Simples</h3>
+                <p>
+                    Lavagem externa completa para deixar seu carro limpo.
+                </p>
+                <strong>R$ 99,90</strong>
+            </div>
+
+            <div class="service-card featured">
+                <div class="service-icon">✨</div>
+                <h3>Lavagem Premium</h3>
+                <p>
+                    Lavagem externa, interna e acabamento profissional.
+                </p>
+                <strong>R$ 149,90</strong>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💎</div>
+                <h3>Lavagem Completa</h3>
+                <p>
+                    Higienização detalhada para o máximo cuidado.
+                </p>
+                <strong>R$ 199,90</strong>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PLANOS -->
+    <section id="planos" class="section plans-section">
+
+        <div class="section-title">
+            <span>PLANOS MENSAIS</span>
+            <h2>Tenha seu carro sempre limpo</h2>
+        </div>
+
+        <div id="planos-container" class="plans">
+
+            <div class="plan-card">
+                <h3>Plano Básico</h3>
+
+                <p class="plan-description">
+                    Ideal para quem lava o carro ocasionalmente.
+                </p>
+
+                <div class="plan-price">
+                    R$ 99,90
+                    <small>/mês</small>
+                </div>
+
+                <ul>
+                    <li>✓ 2 lavagens por mês</li>
+                    <li>✓ Lavagem externa</li>
+                    <li>✓ Agendamento online</li>
+                </ul>
+
+                <button onclick="selecionarPlano('Plano Básico')">
+                    Escolher plano
+                </button>
+            </div>
+
+
+            <div class="plan-card popular">
+                <div class="popular-label">
+                    MAIS POPULAR
+                </div>
+
+                <h3>Plano Premium</h3>
+
+                <p class="plan-description">
+                    Para manter seu carro sempre impecável.
+                </p>
+
+                <div class="plan-price">
+                    R$ 139,90
+                    <small>/mês</small>
+                </div>
+
+                <ul>
+                    <li>✓ 4 lavagens por mês</li>
+                    <li>✓ Lavagem interna e externa</li>
+                    <li>✓ Acabamento premium</li>
+                    <li>✓ Agendamento prioritário</li>
+                </ul>
+
+                <button onclick="selecionarPlano('Plano Premium')">
+                    Escolher plano
+                </button>
+            </div>
+
+
+            <div class="plan-card">
+                <h3>Plano Black</h3>
+
+                <p class="plan-description">
+                    A experiência completa para o seu veículo.
+                </p>
+
+                <div class="plan-price">
+                    R$ 399,90
+                    <small>/mês</small>
+                </div>
+
+                <ul>
+                    <li>✓ 8 lavagens por mês</li>
+                    <li>✓ Higienização completa</li>
+                    <li>✓ Acabamento premium</li>
+                    <li>✓ Atendimento prioritário</li>
+                </ul>
+
+                <button onclick="selecionarPlano('Plano Black')">
+                    Escolher plano
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="section">
+
+        <div class="section-title">
+            <span>PRODUTOS</span>
+            <h2>Cuide do seu carro em casa</h2>
+        </div>
+
+        <div id="produtos-container" class="products">
+
+            <div class="product-card">
+                <div class="product-image">🧴</div>
+
+                <div class="product-info">
+                    <h3>Shampoo Automotivo</h3>
+
+                    <p>
+                        Shampoo especial para limpeza automotiva.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>R$ 74,90</strong>
+
+                        <button onclick="adicionarCarrinho('Shampoo Automotivo', 74.90)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-image">✨</div>
+
+                <div class="product-info">
+                    <h3>Cera Automotiva</h3>
+
+                    <p>
+                        Proteção e brilho para a pintura.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>R$ 99,90</strong>
+
+                        <button onclick="adicionarCarrinho('Cera Automotiva', 99.90)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-image">🧽</div>
+
+                <div class="product-info">
+                    <h3>Kit de Microfibras</h3>
+
+                    <p>
+                        Kit com panos para limpeza e acabamento.
+                    </p>
+
+                    <div class="product-bottom">
+                        <strong>R$ 69,90</strong>
+
+                        <button onclick="adicionarCarrinho('Kit de Microfibras', 69.90)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         
+    </section>
+
+
+    <!-- AGENDAMENTO -->
+    <section id="agendamento" class="booking-section">
+
+        <div class="booking-container">
+
+            <div class="booking-text">
+                <span>AGENDAMENTO</span>
+
+                <h2>
+                    Agende sua lavagem
+                </h2>
+
+                <p>
+                    Escolha o serviço, a data e o horário que
+                    funcionam melhor para você.
+                </p>
+
+                <div class="booking-benefits">
+                    <div>✓ Agendamento rápido</div>
+                    <div>✓ Horários flexíveis</div>
+                    <div>✓ Atendimento profissional</div>
+                </div>
+            </div>
+
+
+            <form id="agendamento-form" class="booking-form">
+
+                <div class="form-group">
+                    <label for="nome">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="telefone">
+                        Telefone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        placeholder="(00) 00000-0000"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="servico">
+                        Serviço
+                    </label>
+
+                    <select id="servico" required>
+                        <option value="">
+                            Selecione um serviço
+                        </option>
+
+                        <option value="Lavagem Simples">
+                            Lavagem Simples - R$ 99,90
+                        </option>
+
+                        <option value="Lavagem Premium">
+                            Lavagem Premium - R$ 149,90
+                        </option>
+
+                        <option value="Lavagem Completa">
+                            Lavagem Completa - R$ 199,90
+                        </option>
+                    </select>
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="data">
+                            Data
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="hora">
+                            Horário
+                        </label>
+
+                        <select id="hora" required>
+
+                            <option value="">
+                                Escolha
+                            </option>
+
+                            <option>08:00</option>
+                            <option>09:00</option>
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                            <option>15:00</option>
+                            <option>16:00</option>
+                            <option>17:00</option>
+                            <option>18:00</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="btn-submit">
+                    Confirmar agendamento
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+
+<!-- LOGIN -->
+<div id="login-modal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="fecharLogin()">
+            ×
+        </button>
+
+        <h2>Entrar</h2>
+
+        <p>
+            Acesse sua conta AutoClean.
+        </p>
+
+        <form id="login-form">
+
+            <input
+                type="email"
+                id="login-email"
+                placeholder="Seu e-mail"
+                required
+            >
+
+            <input
+                type="password"
+                id="login-senha"
+                placeholder="Sua senha"
+                required
+            >
+
+            <button type="submit">
+                Entrar
+            </button>
+
+        </form>
+
+        <p class="register-text">
+            Ainda não possui uma conta?
+            <a href="#">Cadastre-se</a>
+        </p>
+
+    </div>
+</div>
+
+
+<!-- CARRINHO -->
+<div id="cart" class="cart">
+
+    <div class="cart-header">
+        <h3>🛒 Carrinho</h3>
+
+        <button onclick="fecharCarrinho()">
+            ×
+        </button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+        Total:
+        <strong id="cart-total">
+            R$ 0,00
+        </strong>
+    </div>
+
+    <button class="checkout-btn" onclick="finalizarCompra()">
+        Finalizar compra
+    </button>
+
+</div>
+
+
+<footer>
+    <div class="footer-content">
+
+        <div>
+            <h2>🚗 AutoClean</h2>
+            <p>
+                Cuidando do seu carro como ele merece.
+            </p>
+        </div>
+
+        <div>
+            <p>© 2026 AutoClean</p>
+        </div>
+
+    </div>
+</footer>
+
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
